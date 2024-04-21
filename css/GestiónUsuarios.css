@@ -1,0 +1,78 @@
+  
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .botones-container {
+      display: flex; /* Activa el diseño flexible */
+      flex-direction: column; /* Organiza los elementos en una columna */
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+      margin: 20px; /* Añade margen alrededor del contenedor */
+    }
+    .container {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .logo {
+      float: left;
+      margin-top: 10px;
+    }
+    h5 {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .btn-large {
+      float: left;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .edit-btn {
+      background-color: #66bb6a;
+      color: white;
+      padding: 5px 18px;
+      border: none;
+      cursor: pointer;
+    }
+    .delete-btn {
+      background-color: #ef5350;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .logo {
+        max-width: 50%; 
+        float: left; 
+        margin-top: 10px;
+      }
+     .btn-large {
+        float: left;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+    
+      .botones-container {
+        flex-direction: row;
+      }
+        }

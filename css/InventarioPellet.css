@@ -1,0 +1,55 @@
+   body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .logo {
+      float: right;
+      margin-top: 10px;
+    }
+
+    h6 {
+      font-weight: bold;
+      text-align: center;
+    }
+    .bordered {
+     border: 1px solid #ccc;
+     border-collapse: collapse;
+    }
+
+    .bordered th, .bordered td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    }
+  
+
+.btn-edit {
+  background-color: #2196F3; 
+  color: white;
+}
+
+.btn-delete {
+  background-color: #FF5722; 
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .logo {
+    max-width: 50%; 
+    float: right; 
+    margin-top: 10px;
+  }
+  .btn-floating.btn-large {
+    display: block; 
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}

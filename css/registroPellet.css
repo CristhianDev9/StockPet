@@ -1,0 +1,37 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.logo {
+  float: right;
+  margin-top: 10px;
+}
+h5 {
+  font-weight: bold;
+  text-align: center;
+}
+.input-field label {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .logo {
+    max-width: 50%; 
+    float: right; 
+    margin-top: 10px;
+  }
+  .btn-floating.btn-large {
+    display: block; 
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}

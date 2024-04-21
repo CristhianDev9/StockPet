@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 309px;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 
+        2px 4px 12px
+        rgba(0,155,119);
+}
+
+.dropdown-content {
+  width: 100%;
+}
+
+.collapsible-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 24px;
+}
+
+.collapsible-body ul {
+  margin-left: 20px;
+}
+
+h6 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.notificaciones-box {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: 150px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+}
+
+.btn-floating.btn-large {
+  display: flex;
+  float:inline-end ;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .btn-floating.btn-large {
+    margin-right: 10px;
+  }
+
+  .collapsible-header {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .collapsible-body ul {
+    margin-left: 10px;
+  }
+}
