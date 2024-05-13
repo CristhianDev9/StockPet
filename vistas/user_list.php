@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="css/GestiónUsuarios.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" > 
-  <title>Usuarios - StockPro</title>
-  <link rel="icon" type="image/x-icon" href="./img/Cubo.ico">
- 
-</head>
+<?php include "./inc/head.php"; ?>
 <body>
 <div class="container"> 
     
         <div class="logo">
-            <img src="img/StockPro.png" alt="Logo StockPro">
+            <img src="img/StockPet.png" alt="Logo StockPro">
 	
         </div>
             <br>  
@@ -26,6 +15,9 @@
 
     <div class="botones-container">
                 <a href="index.php?vista=home" class="waves-effect waves-light btn-small"><i class="material-icons left">home</i>Menú pricipal</a>
+                <br>
+                <br>
+                <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" class="waves-effect waves-light green btn-small "><i class="material-icons left">account_circle</i>Mi cuenta</a> 
                 <br>
                 <br>
                 <a href="index.php?vista=user_new" class="waves-effect waves-light blue btn-small "><i class="material-icons left">add</i>Añadir Usuario</a> 

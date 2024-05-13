@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <script src="./js/Index.js"></script>
+  
   <div class="logo">
-    <img src="./img/StockPro.png" alt="Logo StockPro">
+    <img src="./img/StockPet.png" alt="Logo StockPro">
     <h6>Panel de Control</h6>
     
   </div>
@@ -29,7 +29,7 @@
             <img class="activator" src="https://www.bing.com/th?id=OIG.7aG0ZoUnUHcU1LLceeLl&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0" alt="Imagen de la tarjeta">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Usuarios<i class="material-icons right">more_vert</i></span>
+            <span class="card-title activator grey-text text-darken-4">Usuarios<i class="material-icons right"></i></span>
             <!-- Dropdown Structure -->
           </div>
           <div class="card-reveal">
@@ -52,14 +52,14 @@
             <img class="activator" src="https://www.bing.com/th?id=OIG.cbYXHIBA.qyAjveJshLA&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0" alt="Imagen de la tarjeta">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Inventarios<i class="material-icons right">more_vert</i></span>
+            <span class="card-title activator grey-text text-darken-4">Inventarios<i class="material-icons right"></i></span>
             <!-- Dropdown Structure -->
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">Inventarios<i class="material-icons right">close</i></span>
             <ul>
               <li class="divider"></li>
-              <li><a href="Preforma.html">Inventario de Preformas</a></li>
+              <li><a href="index.php?vista=product_list">Inventario de Preformas</a></li>
               <li class="divider"></li>
             <li><a href="InventarioEnvases.html">Inventario de Envases</a></li>
             <li class="divider"></li>
@@ -79,7 +79,7 @@
             <img class="activator" src="https://www.bing.com/th?id=OIG.nv84vArsy52ASM5LsFdX&w=236&c=11&rs=1&qlt=90&bgcl=ececec&o=6&pid=PersonalBing&p=0" alt="Imagen de la tarjeta">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Ordenes de producción<i class="material-icons right">more_vert</i></span>
+            <span class="card-title activator grey-text text-darken-4">Ordenes de producción<i class="material-icons right"></i></span>
             <!-- Dropdown Structure -->
           </div>
           <div class="card-reveal">
@@ -100,7 +100,7 @@
             <img class="activator" src="https://th.bing.com/th/id/OIG.zuNIGNOtdQ3zWtRTGRZc?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Imagen de la tarjeta">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Informes de producción<i class="material-icons right">more_vert</i></span>
+            <span class="card-title activator grey-text text-darken-4">Informes de producción<i class="material-icons right"></i></span>
             <!-- Dropdown Structure -->
           </div>
           <div class="card-reveal">

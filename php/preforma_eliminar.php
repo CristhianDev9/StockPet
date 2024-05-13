@@ -1,27 +1,23 @@
 <?php
 	/*== Almacenando datos ==*/
-    $product_id_del=limpiar_cadena($_GET['product_id_del']);
+    $preforma_id_del=limpiar_cadena($_GET['preforma_id_del']);
 
     /*== Verificando producto ==*/
-    $check_producto=conexion();
-    $check_producto=$check_producto->query("SELECT * FROM producto WHERE producto_id='$product_id_del'");
+    $check_preforma=conexion();
+    $check_preforma=$check_preforma->query("SELECT * FROM preforma WHERE preforma_id='$preforma_id_del'");
 
-    if($check_producto->rowCount()==1){
+    if($check_preforma->rowCount()==1){
 
-    	$datos=$check_producto->fetch();
+    	$datos=$check_preforma->fetch();
 
-    	$eliminar_producto=conexion();
-    	$eliminar_producto=$eliminar_producto->prepare("DELETE FROM producto WHERE producto_id=:id");
+    	$eliminar_preforma=conexion();
+    	$eliminar_preforma=$eliminar_preforma->prepare("DELETE FROM preforma WHERE preforma_id=:id");
 
-    	$eliminar_producto->execute([":id"=>$product_id_del]);
+    	$eliminar_preforma->execute([":id"=>$preforma_id_del]);
 
-    	if($eliminar_producto->rowCount()==1){
+    	if($eliminar_preforma->rowCount()==1){
 
-    		if(is_file("./img/producto/".$datos['producto_foto'])){
-    			chmod("./img/producto/".$datos['producto_foto'], 0777);
-				unlink("./img/producto/".$datos['producto_foto']);
-    		}
-
+    		// Si se eliminó correctamente el producto
 	        echo '
 	            <div class="notification is-info is-light">
 	                <strong>¡PRODUCTO ELIMINADO!</strong><br>

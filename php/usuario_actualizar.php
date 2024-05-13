@@ -12,7 +12,7 @@
 
     if($check_usuario->rowCount()<=0){
     	echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El usuario no existe en el sistema
             </div>
@@ -32,7 +32,7 @@
     /*== Verificando campos obligatorios del administrador ==*/
     if($admin_usuario=="" || $admin_clave==""){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No ha llenado los campos que corresponden a su USUARIO o CLAVE
             </div>
@@ -43,7 +43,7 @@
     /*== Verificando integridad de los datos (admin) ==*/
     if(verificar_datos("[a-zA-Z0-9]{4,20}",$admin_usuario)){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 Su USUARIO no coincide con el formato solicitado
             </div>
@@ -53,7 +53,7 @@
 
     if(verificar_datos("[a-zA-Z0-9$@.-]{7,100}",$admin_clave)){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 Su CLAVE no coincide con el formato solicitado
             </div>
@@ -71,7 +71,7 @@
 
     	if($check_admin['usuario_usuario']!=$admin_usuario || !password_verify($admin_clave, $check_admin['usuario_clave'])){
     		echo '
-	            <div class="notification is-danger is-light">
+	            <div class="alert red light">
 	                <strong>¡Ocurrio un error inesperado!</strong><br>
 	                USUARIO o CLAVE de administrador incorrectos
 	            </div>
@@ -81,7 +81,7 @@
 
     }else{
     	echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 USUARIO o CLAVE de administrador incorrectos
             </div>
@@ -105,7 +105,7 @@
     /*== Verificando campos obligatorios del usuario ==*/
     if($nombre=="" || $apellido=="" || $usuario==""){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No has llenado todos los campos que son obligatorios
             </div>
@@ -117,7 +117,7 @@
     /*== Verificando integridad de los datos (usuario) ==*/
     if(verificar_datos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}",$nombre)){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El NOMBRE no coincide con el formato solicitado
             </div>
@@ -127,7 +127,7 @@
 
     if(verificar_datos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}",$apellido)){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El APELLIDO no coincide con el formato solicitado
             </div>
@@ -137,7 +137,7 @@
 
     if(verificar_datos("[a-zA-Z0-9]{4,20}",$usuario)){
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El USUARIO no coincide con el formato solicitado
             </div>
@@ -153,7 +153,7 @@
             $check_email=$check_email->query("SELECT usuario_email FROM usuario WHERE usuario_email='$email'");
             if($check_email->rowCount()>0){
                 echo '
-                    <div class="notification is-danger is-light">
+                    <div alert red light">
                         <strong>¡Ocurrio un error inesperado!</strong><br>
                         El correo electrónico ingresado ya se encuentra registrado, por favor elija otro
                     </div>
@@ -163,7 +163,7 @@
             $check_email=null;
         }else{
             echo '
-                <div class="notification is-danger is-light">
+                <div class="alert red light">
                     <strong>¡Ocurrio un error inesperado!</strong><br>
                     Ha ingresado un correo electrónico no valido
                 </div>
@@ -179,7 +179,7 @@
 	    $check_usuario=$check_usuario->query("SELECT usuario_usuario FROM usuario WHERE usuario_usuario='$usuario'");
 	    if($check_usuario->rowCount()>0){
 	        echo '
-	            <div class="notification is-danger is-light">
+	            <div class="alert red light">
 	                <strong>¡Ocurrio un error inesperado!</strong><br>
 	                El USUARIO ingresado ya se encuentra registrado, por favor elija otro
 	            </div>
@@ -194,7 +194,7 @@
     if($clave_1!="" || $clave_2!=""){
     	if(verificar_datos("[a-zA-Z0-9$@.-]{7,100}",$clave_1) || verificar_datos("[a-zA-Z0-9$@.-]{7,100}",$clave_2)){
 	        echo '
-	            <div class="notification is-danger is-light">
+	            <div class="alert red light">
 	                <strong>¡Ocurrio un error inesperado!</strong><br>
 	                Las CLAVES no coinciden con el formato solicitado
 	            </div>
@@ -203,7 +203,7 @@
 	    }else{
 		    if($clave_1!=$clave_2){
 		        echo '
-		            <div class="notification is-danger is-light">
+		            <div class="alert red light">
 		                <strong>¡Ocurrio un error inesperado!</strong><br>
 		                Las CLAVES que ha ingresado no coinciden
 		            </div>
@@ -233,14 +233,14 @@
 
     if($actualizar_usuario->execute($marcadores)){
         echo '
-            <div class="notification is-info is-light">
+            <div class="alert green light">
                 <strong>¡USUARIO ACTUALIZADO!</strong><br>
                 El usuario se actualizo con exito
             </div>
         ';
     }else{
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No se pudo actualizar el usuario, por favor intente nuevamente
             </div>

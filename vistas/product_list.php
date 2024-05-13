@@ -1,6 +1,25 @@
-<div class="container is-fluid mb-6">
-    <h1 class="title">Productos</h1>
-    <h2 class="subtitle">Lista de productos</h2>
+<?php include "./inc/head.php"; ?>
+
+<div class="container">
+    <div class="logo">
+            <img src="img/StockPet.png" alt="Logo StockPro">
+	
+        </div>
+            <br>  
+     
+        <div class="container is-fluid mb-6">
+            <h5 class="title">Preformas</h5>
+            <h5 class="subtitle">Lista de preformas</h5>
+        </div>
+
+    <div class="botones-container">
+                <a href="index.php?vista=home" class="waves-effect waves-light btn-small"><i class="material-icons left">home</i>Menú pricipal</a>
+                <br>
+                <br>
+                <a href="index.php?vista=preforma_new" class="waves-effect waves-light blue btn-small "><i class="material-icons left">add</i>Añadir registro de preforma</a> 
+    </div>
+  
+    
 </div>
 
 <div class="container pb-6 pt-6">
@@ -8,8 +27,8 @@
         require_once "./php/main.php";
 
         # Eliminar producto #
-        if(isset($_GET['product_id_del'])){
-            require_once "./php/producto_eliminar.php";
+        if(isset($_GET['preforma_id_del'])){
+            require_once "./php/preforma_eliminar.php";
         }
 
         if(!isset($_GET['page'])){
@@ -29,6 +48,6 @@
         $busqueda="";
 
         # Paginador producto #
-        require_once "./php/producto_lista.php";
+        require_once "./php/preforma_lista.php";
     ?>
 </div>

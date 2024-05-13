@@ -34,6 +34,7 @@
                 	<th>#</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
+					<th>Cargo</th>
                     <th>Usuario</th>
                     <th>Email</th>
                     <th colspan="2">Opciones</th>
@@ -51,6 +52,7 @@
 					<td>'.$contador.'</td>
                     <td>'.$rows['usuario_nombre'].'</td>
                     <td>'.$rows['usuario_apellido'].'</td>
+					<td>'.$rows['usuario_cargo'].'</td>
                     <td>'.$rows['usuario_usuario'].'</td>
                     <td>'.$rows['usuario_email'].'</td>
                     <td>

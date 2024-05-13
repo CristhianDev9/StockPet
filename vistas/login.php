@@ -12,7 +12,7 @@
 <body>  
   <div class="container">
     <div class="logo">
-      <img src="img/StockPro.png" alt="Logo de la Empresa" class="responsive-img">
+      <img src="./img/StockPet.png" alt="Logo de la Empresa" class="responsive-img">
     </div>
     <h5>Iniciar Sesión</h5>
     
@@ -22,15 +22,16 @@
         <label for="usuario">Usuario</label>
       </div>
       <div class="input-field">
-        <input type="password" id="contrasena" name="login_clave" > <!-- Agregado el atributo name -->
+        <input type="password" id="contrasena" name="login_clave" required> <!-- Agregado el atributo name -->
         <label for="contrasena">Contraseña</label>
       </div>
         
-      <input type="submit" value="Iniciar sesión" class="btn waves-effect waves-light btn-login btn-block"> <!-- Eliminado el evento onclick -->
+      <input type="submit" value="Iniciar sesión" class="btn waves-effect waves-light btn-login btn-block"> 
 
       <div class="recover-password">
         <a href="RecuperarContrasena.html">¿Olvidó su contraseña?</a>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	  <?php
 			if(isset($_POST['login_usuario']) && isset($_POST['login_clave'])){
 				require_once "./php/main.php";

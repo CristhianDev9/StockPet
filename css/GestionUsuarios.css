@@ -3,10 +3,10 @@
       font-family: Arial, sans-serif;
     }
     .botones-container {
-      display: flex; /* Activa el diseño flexible */
-      flex-direction: column; /* Organiza los elementos en una columna */
-      align-items: flex-start; /* Alinea los elementos a la izquierda */
-      margin: 20px; /* Añade margen alrededor del contenedor */
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start;
+      margin: 20px; 
     }
     .container {
       display: flex;
@@ -14,7 +14,7 @@
       scrollbar-width: none;
     }
     .logo {
-      float: left;
+      float: right;
       margin-top: 10px;
     }
     h5 {
