@@ -3,17 +3,24 @@ body {
 }
 
 .logo {
-  margin-bottom: 50px; /* Espacio entre el logo y las cards */
+  margin-bottom: 40px; /* Espacio entre el logo y las cards */
 }
 
 .card {
-  margin-bottom: 5px; /* Espacio entre las cards */
+  position: relative;
+  flex: 0 0 309px;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 
+    2px 4px 12px
+    rgba(0,155,119);
 }
 
 .center-cards {
   display: flex;
   justify-content: center; /* Centrar las cards horizontalmente */
-  flex-wrap: wrap; /* Permitir que las cards se ajusten a la línea */
 }
 
 .card-title {
@@ -27,4 +34,3 @@ body {
 h5, h6 {
   color: black; /* Cambiar el color de los títulos a negro */
 }
-
