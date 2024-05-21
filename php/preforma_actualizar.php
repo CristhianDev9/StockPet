@@ -40,7 +40,7 @@
     }
 
     /* Verificando integridad de los datos */
-    if (verificar_datos("[a-zA-Z0-9- ]{1,70}", $gramaje)) {
+    if (!preg_match("/^[0-9]+(?:\.[0-9]+)?$/", $gramaje)) {
         echo '
             <div class="alert red light">
                 <strong>¡Ocurrió un error inesperado!</strong><br>

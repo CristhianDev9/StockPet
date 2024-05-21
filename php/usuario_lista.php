@@ -1,29 +1,21 @@
 <?php
+	include "./inc/head.php";
 	$inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
 	$tabla="";
 
 	if(isset($busqueda) && $busqueda!=""){
-
 		$consulta_datos="SELECT * FROM usuario WHERE ((usuario_id!='".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%' OR usuario_apellido LIKE '%$busqueda%' OR usuario_usuario LIKE '%$busqueda%' OR usuario_email LIKE '%$busqueda%')) ORDER BY usuario_nombre ASC LIMIT $inicio,$registros";
-
 		$consulta_total="SELECT COUNT(usuario_id) FROM usuario WHERE ((usuario_id!='".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%' OR usuario_apellido LIKE '%$busqueda%' OR usuario_usuario LIKE '%$busqueda%' OR usuario_email LIKE '%$busqueda%'))";
-
-	}else{
-
+	} else {
 		$consulta_datos="SELECT * FROM usuario WHERE usuario_id!='".$_SESSION['id']."' ORDER BY usuario_nombre ASC LIMIT $inicio,$registros";
-
 		$consulta_total="SELECT COUNT(usuario_id) FROM usuario WHERE usuario_id!='".$_SESSION['id']."'";
-		
 	}
 
 	$conexion=conexion();
-
 	$datos = $conexion->query($consulta_datos);
 	$datos = $datos->fetchAll();
-
 	$total = $conexion->query($consulta_total);
 	$total = (int) $total->fetchColumn();
-
 	$Npaginas =ceil($total/$registros);
 
 	$tabla.='
@@ -56,17 +48,17 @@
                     <td>'.$rows['usuario_usuario'].'</td>
                     <td>'.$rows['usuario_email'].'</td>
                     <td>
-                        <a href="index.php?vista=user_update&user_id_up='.$rows['usuario_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
+                        <a href="index.php?vista=user_update&user_id_up='.$rows['usuario_id'].'" class="waves-effect waves-light btn-small green">Actualizar</a>
                     </td>
                     <td>
-                        <a href="'.$url.$pagina.'&user_id_del='.$rows['usuario_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
+                        <a href="'.$url.$pagina.'&user_id_del='.$rows['usuario_id'].'" class="waves-effect waves-light btn-small red delete-link">Eliminar</a>
                     </td>
                 </tr>
             ';
             $contador++;
 		}
 		$pag_final=$contador-1;
-	}else{
+	} else {
 		if($total>=1){
 			$tabla.='
 				<tr class="has-text-centered" >
@@ -77,7 +69,7 @@
 					</td>
 				</tr>
 			';
-		}else{
+		} else {
 			$tabla.='
 				<tr class="has-text-centered" >
 					<td colspan="7">
@@ -87,7 +79,6 @@
 			';
 		}
 	}
-
 
 	$tabla.='</tbody></table></div>';
 
@@ -101,3 +92,18 @@
 	if($total>=1 && $pagina<=$Npaginas){
 		echo paginador_tablas($pagina,$Npaginas,$url,7);
 	}
+?>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const deleteLinks = document.querySelectorAll('.delete-link');
+    deleteLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const confirmation = confirm('¿Está seguro de que desea eliminar este registro? Esta acción no es reversible.');
+            if (confirmation) {
+                window.location.href = this.href;
+            }
+        });
+    });
+});
+</script>

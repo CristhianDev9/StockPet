@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="./css/PanelDeControl.css"/>
+  <link rel="stylesheet" href="./css/PanelDeControl.css" />
   <title>Panel de Control - StockPro</title>
   <link rel="icon" type="image/x-icon" href="./img/Cubo.ico">
 </head>
 
 <body>
-  
+
   <div class="logo">
     <img src="./img/StockPet.png" alt="Logo StockPro">
     <h6>Panel de Control</h6>
-    
   </div>
-  <div id="notificacionesBox" class="notificaciones-box">
-    <p>No tienes notificaciones.</p>
-  </div>
+  
   <br><br><br>
   <div class="container">
     <div class="row">
@@ -38,12 +36,12 @@
               <li class="divider"></li>
               <li><a href="index.php?vista=user_new">Añadir Usuarios</a></li>
               <li class="divider"></li>
-            <li><a href="index.php?vista=user_list">Gestionar Usuarios</a></li>
+              <li><a href="index.php?vista=user_list">Gestionar Usuarios</a></li>
             </ul>
           </div>
         </div>
       </div>
-      
+
       <!-- tarjeta para inventarios -->
 
       <div class="col s8 m3 l3">
@@ -59,18 +57,16 @@
             <span class="card-title grey-text text-darken-4">Inventarios<i class="material-icons right">close</i></span>
             <ul>
               <li class="divider"></li>
-              <li><a href="index.php?vista=product_list">Inventario de Preformas</a></li>
+              <li><a href="index.php?vista=preforma_list">Inventario de Preformas</a></li>
               <li class="divider"></li>
-            <li><a href="InventarioEnvases.html">Inventario de Envases</a></li>
-            <li class="divider"></li>
-            <li><a href="InvantarioDesperdicio.html">Inventario de Material para Reciclar</a></li>
-            <li class="divider"></li>
-            <li><a href="InventarioPellet.html">Inventario de Pellet</a></li>
+              <li><a href="index.php?vista=envase_list">Inventario de Envases</a></li>
+              <li class="divider"></li>
+              <li><a href="index.php?vista=maquinaria_list">Inventario de Maquinaria</a></li> 
             </ul>
           </div>
         </div>
 
-        
+
       </div>
 
       <div class="col s8 m3 l3">
@@ -86,9 +82,9 @@
             <span class="card-title grey-text text-darken-4">Ordenes de producción<i class="material-icons right">close</i></span>
             <ul>
               <li class="divider"></li>
-              <li><a href="RegistroOP.html">Crear Orden de Producción</a></li>
+              <li><a href="index.php?vista=orden_new">Crear Orden de Producción</a></li>
               <li class="divider"></li>
-              <li><a href="GestiónOP.html">Gestionar Órdenes de Producción</a></li>
+              <li><a href="index.php?vista=orden_list">Gestionar Órdenes de Producción</a></li>
             </ul>
           </div>
         </div>
@@ -128,5 +124,5 @@
   </script>
   <footer>
     <a href="index.php?vista=logout" class="btn waves-effect waves-light red">Cerrar Sesión</a>
-</footer>
+  </footer>
 </body>

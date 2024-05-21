@@ -4,6 +4,8 @@ body {
 
 .container {
   display: flex;
+  justify-content: center;
+  gap: 1.5rem;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -17,7 +19,20 @@ body {
   max-width: 100%;
   height: auto;
 }
+.card-container {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 1.5rem; /* Espacio entre las tarjetas */
+}
 
+.card-register {
+  position: relative;
+  flex: 0 0 100px; /* Establece un ancho de 200px */
+  max-height: 120px; /* Establece una altura máxima */
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px rgba(0, 155, 119);
+}
 .card {
   position: relative;
   flex: 0 0 309px;

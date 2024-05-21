@@ -1,171 +1,30 @@
-
-.main-container-login {
-    max-width: 40px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    
-  }
-.main-container > .hero-body{
-	height: auto;
-	width: 100%;
-	max-width: 400px;
-	min-width: 300px;
-}
-
-.form-inline{
-	display: inline-flex;
-}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    
-  }
-  .logo {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .input-field label {
-    font-weight: bold;
-    
-  }
-  .btn-login {
-    
-    color: white;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .recover-password {
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 600px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-  .input-field label {
-    font-size: 14px; 
-  }
-  .btn-login {
-    margin-top: 15px;
-  }
-  .recover-password {
-    margin-top: 15px;
-  }
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
+  color: black; /* Cambiar todas las fuentes a negro */
 }
 
 .logo {
-  text-align: right;
-  margin-top: 10px;
-}
-
-.logo img {
-  max-width: 100%;
-  height: auto;
+  margin-bottom: 50px; /* Espacio entre el logo y las cards */
 }
 
 .card {
-  position: relative;
-  flex: 0 0 309px;
-  height: 300px;
-  overflow: hidden;
-  margin-left: 1.5rem;
-  border-radius: 18px;
-  box-shadow: 
-        2px 4px 12px
-        rgba(0,155,119);
+  margin-bottom: 5px; /* Espacio entre las cards */
 }
 
-.dropdown-content {
-  width: 100%;
-}
-
-.collapsible-header {
-  font-weight: bold;
+.center-cards {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Centrar las cards horizontalmente */
+  flex-wrap: wrap; /* Permitir que las cards se ajusten a la línea */
 }
 
-.section-title {
-  font-size: 24px;
+.card-title {
+  color: black; /* Asegurar que el texto del título de la card sea negro */
 }
 
-.collapsible-body ul {
-  margin-left: 20px;
+.card-action a {
+  color: black; /* Asegurar que el enlace en la card sea negro */
 }
 
-h6 {
-  font-weight: bold;
-  text-align: center;
+h5, h6 {
+  color: black; /* Cambiar el color de los títulos a negro */
 }
 
-.notificaciones-box {
-  display: none;
-  position: absolute;
-  top: 150px;
-  right: 150px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 1;
-}
-
-.btn-floating.btn-large {
-  display: flex;
-  float:inline-end ;
-  margin-top: 0px;
-  margin-right: 10px;
-}
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 600px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .btn-floating.btn-large {
-    margin-right: 10px;
-  }
-
-  .collapsible-header {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .collapsible-body ul {
-    margin-left: 10px;
-  }
-}

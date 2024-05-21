@@ -26,8 +26,17 @@
                 <label for="preforma_gramaje">Gramaje</label>
             </div>
             <div class="input-field col s6">
-                <input id="preforma_color" type="text" class="validate" name="preforma_color" required>
-                <label for="preforma_color">Color</label>
+                <select id="preforma_color" type="text" class="validate" name="preforma_color" required>
+                    <option value="" disabled selected>Seleccione un color</option>
+                    <option value="Cristal">Cristal</option>
+                    <option value="Ambar">Ambar</option>
+                    <option value="Azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="Amarillo">Amarillo</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Rojo">Rojo</option>
+                </select>
+                <label for="preforma_color">Color</label> 
             </div>
         </div>
         <div class="row">

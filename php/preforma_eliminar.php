@@ -19,23 +19,23 @@
 
     		// Si se eliminó correctamente el producto
 	        echo '
-	            <div class="notification is-info is-light">
+	            <div class="alert green ligth">
 	                <strong>¡PRODUCTO ELIMINADO!</strong><br>
 	                Los datos del producto se eliminaron con exito
 	            </div>
 	        ';
 	    }else{
 	        echo '
-	            <div class="notification is-danger is-light">
+	            <div class="alert red ligth">
 	                <strong>¡Ocurrio un error inesperado!</strong><br>
 	                No se pudo eliminar el producto, por favor intente nuevamente
 	            </div>
 	        ';
 	    }
-	    $eliminar_producto=null;
+	    $eliminar_preforma=null;
     }else{
         echo '
-            <div class="notification is-danger is-light">
+            <div class="alert red ligth">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El PRODUCTO que intenta eliminar no existe
             </div>

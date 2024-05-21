@@ -14,14 +14,14 @@ if ($check_usuario->rowCount() == 1) {
 
     if ($eliminar_usuario->rowCount() == 1) {
         echo '
-            <div class="notification is-info is-light">
+            <div class="notification">
                 <strong>¡USUARIO ELIMINADO!</strong><br>
                 Los datos del usuario se eliminaron con éxito
             </div>
         ';
     } else {
         echo '
-            <div class="notification is-danger is-light">
+            <div class="notification">
                 <strong>¡Ocurrió un error inesperado!</strong><br>
                 No se pudo eliminar el usuario, por favor inténtalo nuevamente
             </div>
@@ -30,7 +30,7 @@ if ($check_usuario->rowCount() == 1) {
     $eliminar_usuario = null;
 } else {
     echo '
-        <div class="notification is-danger is-light">
+        <div class="notification">
             <strong>¡Ocurrió un error inesperado!</strong><br>
             El USUARIO que intentas eliminar no existe
         </div>

@@ -8,10 +8,10 @@
         </div>
             <br>  
      
-        <div class="container is-fluid mb-6">
+        <div class="container">
             <h5 class="title">Usuarios</h5>
             <h5 class="subtitle">Lista de usuarios</h5>
-        </div>
+        
 
     <div class="botones-container">
                 <a href="index.php?vista=home" class="waves-effect waves-light btn-small"><i class="material-icons left">home</i>Menú pricipal</a>
@@ -22,7 +22,8 @@
                 <br>
                 <a href="index.php?vista=user_new" class="waves-effect waves-light blue btn-small "><i class="material-icons left">add</i>Añadir Usuario</a> 
     </div>
-    <div >  
+    </div>
+    </body> 
         <?php
             require_once "./php/main.php";
 
@@ -48,5 +49,4 @@
             # Paginador usuario #
             require_once "./php/usuario_lista.php";
         ?>
-    </div>
-    </body>
+   

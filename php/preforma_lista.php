@@ -9,12 +9,13 @@
                         <th>Pico</th>
                         <th>Cantidad</th>
                         <th>Cantidad Reservada</th>
+                        <th>Cantidad Disponible</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>';
 
-    $campos = "preforma_id, preforma_gramaje, preforma_color, preforma_pico, preforma_cantidad, preforma_cantidad_res";
+    $campos = "preforma_id, preforma_gramaje, preforma_color, preforma_pico, preforma_cantidad, preforma_cantidad_res, preforma_cant_disp";
 
     if (isset($busqueda) && $busqueda != "") {
         $consulta_datos = "SELECT $campos FROM preforma WHERE preforma_gramaje LIKE '%$busqueda%' OR preforma_color LIKE '%$busqueda%' ORDER BY preforma_gramaje ASC LIMIT $inicio, $registros";
@@ -48,6 +49,7 @@
                     <td>' . $rows['preforma_pico'] . '</td>
                     <td>' . $rows['preforma_cantidad'] . '</td>
                     <td>' . $rows['preforma_cantidad_res'] . '</td>
+                    <td>' . $rows['preforma_cant_disp'] . '</td>
                     <td>
                         <a href="index.php?vista=preforma_update&preforma_id_up='.$rows['preforma_id'].'" class="waves-effect waves-light btn-small green">Actualizar</a>
                         <a href="'.$url.$pagina.'&preforma_id_del='.$rows['preforma_id'].'" onclick="return confirmarEliminacion ('.$rows['preforma_id'].')" class="waves-effect waves-light btn-small red">Eliminar</a>
@@ -81,7 +83,7 @@
     function confirmarEliminacion(preformaId) {
         if (confirm("¿Estás seguro de que deseas eliminar este registro?")) {
             // Si el usuario confirma la eliminación, redirige a la página con el parámetro preforma_id_del
-            window.location.href = "index.php?vista=product_list&preforma_id_del=" + preformaId;
+            window.location.href = "index.php?vista=preforma_list&preforma_id_del=" + preformaId;
             return true; // Devuelve true para permitir la redirección
         } else {
             return false; // Devuelve false para evitar la redirección
